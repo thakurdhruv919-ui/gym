@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHRUVA Fitness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="fade-in">
+  <h1>DHRUVA Fitness</h1>
+  <nav>
+    <a href="#machines">Machines</a>
+    <a href="#fees">Fees</a>
+    <a href="#supplements">Supplements</a>
+    <a href="#yoga">Yoga</a>
+    <a href="#cardio">Cardio</a>
+    <a href="#form">Join</a>
+  </nav>
+</header>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/917455822267" class="whatsapp" target="_blank">
+  Chat on WhatsApp
+</a>
+
+<section id="machines" class="fade-in">
+  <h2>Gym Machines</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/treadmil.jpg">
+       <h3>Treadmill</h3>
+    </div>
+    <div class="card">
+      <img src="images/benchjpg.jpg">
+      <h3>Bench Press</h3>
+    </div>
+    <div class="card">
+      <img src="images/legpress.jpg">
+      <h3>Leg Press</h3>
+    </div>
+  </div>
+</section>
+
+<section id="fees" class="fade-in">
+  <h2>Membership Fees</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1 Month</h3>
+      <p class="price">₹1,500</p>
+    </div>
+    <div class="card">
+      <h3>3 Months</h3>
+      <p class="price">₹4,000</p>
+    </div>
+    <div class="card">
+      <h3>1 Year</h3>
+      <p class="price">₹12,000</p>
+    </div>
+  </div>
+</section>
+
+<section id="supplements" class="fade-in">
+  <h2>Supplement Stack</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/protein.jpg">
+      <h3>Whey Protein</h3>
+      <a href="https://www.amazon.in" target="_blank">Buy Now</a>
+    </div>
+    <div class="card">
+      <img src="images/creatine.jpg">
+      <h3>Creatine</h3>
+      <a href="https://www.amazon.in" target="_blank">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="yoga" class="fade-in">
+  <h2>Yoga Section</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/yoga.jpg">
+      <h3>Morning Yoga</h3>
+      <p class="price">₹800/month</p>
+    </div>
+  </div>
+</section>
+
+<section id="cardio" class="fade-in">
+  <h2>Cardio Training</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/hiit.jpg">
+      <h3>HIIT Training</h3>
+      <p class="price">₹1,000/month</p>
+    </div>
+  </div>
+</section>
+
+<!-- Membership Form -->
+<section id="form" class="fade-in">
+  <h2>Join DHRUVA Fitness</h2>
+  <form class="form" onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <select id="plan">
+      <option>1 Month</option>
+      <option>3 Months</option>
+      <option>1 Year</option>
+    </select>
+    <button type="submit">Join Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 DHRUVA Fitness</p>
+</footer>
+
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let plan = document.getElementById('plan').value;
+
+  let msg = `Hello, I want to join DHRUVA Fitness.%0AName: ${name}%0APhone: ${phone}%0APlan: ${plan}`;
+  window.open(`https://wa.me/917455822267?text=${msg}`, '_blank');
+}
+</script>
+
+</body>
+</html>
+
+
+
